@@ -20,7 +20,7 @@ public class MapBuilderTest {
         map.p("a", "A");
         map.p("b", "B");
         assertNotNull(map);
-        assertTrue(map.size() == 2);
+        assertTrue(map.size() == 3);
         assertEquals(map.get("a"), "A");
         assertEquals(map.get("b"), "B");
     }
