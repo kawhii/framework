@@ -1,6 +1,6 @@
 package com.carl.framework.core.util;
 
-import org.junit.Assert;
+import org.junit.Assert.*;
 
 import static org.junit.Assert.*;
 
@@ -10,18 +10,18 @@ import static org.junit.Assert.*;
 public class MapBuilderTest {
     @org.junit.Test
     public void build() throws Exception {
-        MapBuilder<String, Object> map = MapBuilder.<String, Object>build();
-        Assert.assertNotNull(map);
+        MapBuilder<String, Object> map = MapBuilder.build();
+        assertNotNull(map);
     }
 
     @org.junit.Test
     public void p() throws Exception {
-        MapBuilder<String, String> map = MapBuilder.<String, String>build();
+        MapBuilder<String, String> map = MapBuilder.build();
         map.p("a", "A");
         map.p("b", "B");
-        Assert.assertNotNull(map);
-        Assert.assertTrue(map.size() == 3);
-        Assert.assertEquals(map.get("a"), "A");
-        Assert.assertEquals(map.get("b"), "B");
+        assertNotNull(map);
+        assertTrue(map.size() == 2);
+        assertEquals(map.get("a"), "A");
+        assertEquals(map.get("b"), "B");
     }
 }
