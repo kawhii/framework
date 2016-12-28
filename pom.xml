@@ -17,6 +17,40 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://192.168.100.66:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://192.168.100.66:8081/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <distributionManagement>
+
+        <repository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://192.168.100.66:8081/repository/maven-snapshots/</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <finalName>framework-core</finalName>
         <plugins>
